@@ -1,10 +1,17 @@
-
 var thumbs = new Swiper('.gallery-thumbs' , {
 
     /** TODO */
-    slidesPerView: 'auto',
-
-});
-
-
-/** TODO: Popup */
+    
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // Enable debugger
+      debugger: true
+    });
