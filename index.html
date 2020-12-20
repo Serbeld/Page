@@ -6,6 +6,10 @@
 	<link rel="icon" href="https://www.puppis.com.co/arquivos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css" />
+  
+  <!-- Demo styles -->
+  <style>
+  </style>
   </head>
 
   <body>
@@ -22,6 +26,12 @@
 			  <div class="swiper-slide gallery-item item-2"></div>
 			  <!-- TODO -->
 			</div>
+            
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 		</div>
 	</section>
 
@@ -32,8 +42,80 @@
 			<!-- TODO -->
 		</div>
 	</div>
-
+      
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Include plugin after Swiper -->
+    <script>
+        /* ========
+        Debugger plugin, simple demo plugin to console.log some of callbacks
+        ======== */
+        var myPlugin = {
+          name: 'debugger',
+          params: {
+            debugger: false,
+          },
+          on: {
+            init: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('init');
+            },
+            click: function (swiper, e) {
+              if (!swiper.params.debugger) return;
+              console.log('click');
+            },
+            tap: function (swiper, e) {
+              if (!swiper.params.debugger) return;
+              console.log('tap');
+            },
+            doubleTap: function (swiper, e) {
+              if (!swiper.params.debugger) return;
+              console.log('doubleTap');
+            },
+            sliderMove: function (swiper, e) {
+              if (!swiper.params.debugger) return;
+              console.log('sliderMove');
+            },
+            slideChange: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('slideChange', this.previousIndex, '->', this.activeIndex);
+            },
+            slideChangeTransitionStart: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('slideChangeTransitionStart');
+            },
+            slideChangeTransitionEnd: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('slideChangeTransitionEnd');
+            },
+            transitionStart: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('transitionStart');
+            },
+            transitionEnd: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('transitionEnd');
+            },
+            fromEdge: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('fromEdge');
+            },
+            reachBeginning: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('reachBeginning');
+            },
+            reachEnd: function (swiper) {
+              if (!swiper.params.debugger) return;
+              console.log('reachEnd');
+            },
+          },
+        };
+      </script>
+      
+
     <script src="./app.js"></script>
+    
+    
+      
   </body>
 </html>
