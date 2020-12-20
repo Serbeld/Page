@@ -1,0 +1,83 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container-daycare-gallery-title h1 {
+  color: rgb(78, 78, 78);
+  /* TODO */
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.container-daycare-gallery {
+  padding: 30px 0;
+  display: block;
+}
+
+.gallery-item {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.item-1 {
+  background-image: url(./images/guarderia-galeria-lc-1.jpg);
+}
+.item-2 {
+  /* TODO... */
+}
+
+.item-3 {
+  /* TODO... */
+}
+
+/** POPUP **/
+
+.daycare-gallery-popup{
+	display: none;
+}
+
+button.close-gallery {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  /* TODO */
+  border: none;
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
+  padding: 10px;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+  transform: scaleY(0.9);
+}
+
+.daycare-gallery-popup .gallery-item {
+  background-position: center;
+  /* TODO */
+  border-radius: 20px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
